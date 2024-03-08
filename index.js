@@ -54,6 +54,10 @@ fibonacci(13) // retorna "O numero 13 pertence a sequencia de fibonacci"
 // 5) 
 
 function reverseString(string) {
+  if (!string) {
+    return console.log('Por favor, insira uma string')
+  }
+
   let reversedString = '';
   const lastIndex = string.length - 1;
   for (let index = lastIndex; index >= 0; index--) {
