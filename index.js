@@ -1,10 +1,10 @@
 // 1)
 function sum() {
-  const indice = 13;
-  let soma = 0;
-  let k = 0;
+  const indice = 13;  //define o valor maximo a ser somado
+  let soma = 0;  //inicia a variavel soma
+  let k = 0;    //inicia a variavel k
 
-  while (k < indice) {
+  while (k < indice) {  //enquanto k for menor que o indice, a variavel soma recebe a soma de k
     k++;
     soma += k;
   }
@@ -16,18 +16,20 @@ sum() // retorna 91
 // 2)
 
 function fibonacci(num) {
-  if (num === undefined || isNaN(num)) {
+  if (num === undefined || isNaN(num)) {  //verifica se o valor inserido é um numero e se foi inserido
     return console.log('Por favor, insira um número')
   }
-  let fibonacciArray = [0, 1];
-  let len = fibonacciArray.length;
+  let fibonacciArray = [0, 1];  //inicia a sequencia de fibonacci
+  let len = fibonacciArray.length;  //inicia a variavel len com o tamanho da sequencia de fibonacci
 
- for (let index = 0; fibonacciArray[len - 1] <= num; index++ ) {
+  //enquanto o ultimo elemento da sequencia de fibonacci for menor ou igual ao numero inserido, a sequencia de fibonacci é incrementada
+
+ for (let index = 0; fibonacciArray[len - 1] <= num; index++ ) { 
   const nextFib = fibonacciArray[len - 1] + fibonacciArray[len - 2]
   fibonacciArray.push(nextFib);
   len = fibonacciArray.length;
  }
- if (fibonacciArray.includes(num)) {
+ if (fibonacciArray.includes(num)) {  //verifica se o numero inserido pertence a sequencia de fibonacci
   return console.log(`O numero ${num} pertence a sequencia de fibonacci`)
  }
 
